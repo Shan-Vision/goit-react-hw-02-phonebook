@@ -1,12 +1,12 @@
 import { Item, ItemButton } from './ContactItem.styled';
 import PropTypes from 'prop-types';
 
-function ContactItem({ name, number, onDelete }) {
+function ContactItem({ id,name, number, onDelete }) {
   return (
     <Item>
       <span>{name}:</span>
       <span>{number}</span>
-      <ItemButton onClick={onDelete}>delete</ItemButton>
+      <ItemButton type="button" onClick={()=> {onDelete(id)}}>delete</ItemButton>
     </Item>
   );
 }

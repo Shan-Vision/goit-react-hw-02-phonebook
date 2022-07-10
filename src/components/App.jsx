@@ -41,9 +41,10 @@ class App extends Component {
       };
     });
   };
+
   render() {
     const contactNameList = this.state.contacts.map(contact => contact.name);
-    
+
     return (
       <div
         style={{
